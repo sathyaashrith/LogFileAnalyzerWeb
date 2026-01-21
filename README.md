@@ -52,3 +52,27 @@ YYYY-MM-DD HH:MM:SS IP_ADDRESS REQUEST_METHOD STATUS_CODE
 
 ---
 
+## 📊 Dashboard Output Includes
+
+- Total Requests  
+- Total Errors  
+- Success Requests  
+- Error Rate  
+- Error Code Frequency Table  
+- Top 5 IPs Generating Errors  
+- Error Distribution Chart  
+- Request Method Distribution Chart  
+- Download Reports Section  
+
+---
+
+## 📥 Download Options
+
+The dashboard provides:
+
+- 📄 Summary Report (TXT)  
+- 📑 Error Frequency CSV  
+- 🌐 Top IP CSV  
+- ⚡ Request Methods CSV  
+- 📦 Full Report ZIP (includes reports + charts)  
+
