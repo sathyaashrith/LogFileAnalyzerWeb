@@ -69,3 +69,33 @@ LogFileAnalyzerWeb/
 │   └── reports/
 └── logs/
     └── app.log
+---
+**📌 Sample Log Format Supported**
+
+Each log line should follow this format:
+
+YYYY-MM-DD HH:MM:SS IP_ADDRESS REQUEST_METHOD STATUS_CODE
+Example:
+2026-01-21 10:10:10 192.168.1.10 GET 200
+2026-01-21 10:10:11 192.168.1.12 POST 404
+2026-01-21 10:10:12 192.168.1.13 PUT 500
+---
+**📊 Output Dashboard Includes**
+
+Total Requests
+
+Total Errors
+
+Success Requests
+
+Error Rate
+
+Error Code Frequency Table
+
+Top 5 IPs Generating Errors
+
+Error Distribution Chart
+
+Request Method Distribution Chart
+
+Downloads Section
