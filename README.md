@@ -69,7 +69,7 @@ LogFileAnalyzerWeb/
 │   └── reports/
 └── logs/
     └── app.log
-```bash
+
 ---
 **📌 Sample Log Format Supported**
 
@@ -100,4 +100,5 @@ Error Distribution Chart
 Request Method Distribution Chart
 
 Downloads Section
+
 
