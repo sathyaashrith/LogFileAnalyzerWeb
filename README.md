@@ -47,7 +47,6 @@ It identifies HTTP error patterns, top error-generating IPs, request method dist
 
 Each log line should follow this format:
 
-```text
 YYYY-MM-DD HH:MM:SS IP_ADDRESS REQUEST_METHOD STATUS_CODE
 
 ---
@@ -75,4 +74,5 @@ The dashboard provides:
 - 🌐 Top IP CSV  
 - ⚡ Request Methods CSV  
 - 📦 Full Report ZIP (includes reports + charts)  
+
 
