@@ -49,3 +49,6 @@ Each log line should follow this format:
 
 ```text
 YYYY-MM-DD HH:MM:SS IP_ADDRESS REQUEST_METHOD STATUS_CODE
+
+---
+
