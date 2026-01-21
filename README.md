@@ -37,40 +37,7 @@ It identifies HTTP error patterns, top error-generating IPs, request method dist
 
 ---
 
-## 📂 Project Folder Structure
 
-```bash
-LogFileAnalyzerWeb/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-├── src/
-│   ├── analyzer.py
-│   ├── log_parser.py
-│   ├── logger_setup.py
-│   ├── report_generator.py
-│   └── visualizer.py
-│
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   └── results.html
-│
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   └── images/
-│
-├── uploads/
-├── outputs/
-│   └── reports/
-└── logs/
-    └── app.log
-
----
 **📌 Sample Log Format Supported**
 
 Each log line should follow this format:
@@ -100,5 +67,6 @@ Error Distribution Chart
 Request Method Distribution Chart
 
 Downloads Section
+
 
 
