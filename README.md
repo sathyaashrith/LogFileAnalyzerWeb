@@ -75,4 +75,8 @@ The dashboard provides:
 - ⚡ Request Methods CSV  
 - 📦 Full Report ZIP (includes reports + charts)  
 
+---
+
+<img width="1919" height="949" alt="Screenshot 2026-01-21 142409" src="https://github.com/user-attachments/assets/5ba59642-9da1-464b-85e0-e72f9a0406c0" />
+<img width="1909" height="940" alt="Screenshot 2026-01-21 142437" src="https://github.com/user-attachments/assets/7a39f11f-5c9b-4833-8419-6a72b1cb2606" />
 
