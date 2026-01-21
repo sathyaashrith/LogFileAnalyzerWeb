@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2 class="fw-bold">Analysis Results</h2>
+  <a href="/" class="btn btn-outline-dark">⬅ Upload Another File</a>
+</div>
+
+<!-- Filter Card -->
+<div class="card p-3 mb-4">
+  <h5 class="fw-bold">🔎 Filter Results</h5>
+
+  <form action="/filter" method="GET" class="row g-3 mt-1">
+    <div class="col-md-5">
+      <label class="form-label fw-semibold">Search by IP</label>
+      <input type="text" class="form-control" name="ip" placeholder="e.g. 192.168.1.10"
+             value="{{ ip_filter if ip_filter else '' }}">
+    </div>
+
+    <div class="col-md-5">
+      <label class="form-label fw-semibold">Filter by Error Code</label>
+      <input type="text" class="form-control" name="code" placeholder="e.g. 404"
+             value="{{ code_filter if code_filter else '' }}">
+    </div>
+
+    <div class="col-md-2 d-flex align-items-end">
+      <button class="btn btn-primary w-100">Apply</button>
+    </div>
+  </form>
+
+  <div class="mt-3">
+    <a href="/filter" class="btn btn-outline-danger btn-sm">Clear Filters</a>
+  </div>
+</div>
+
+<!-- Summary Cards -->
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <div class="stat-card bg-total">
+      <h6>Total Requests</h6>
+      <h3>{{ total_requests }}</h3>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="stat-card bg-error">
+      <h6>Total Errors</h6>
+      <h3>{{ total_errors }}</h3>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="stat-card bg-success">
+      <h6>Success Requests</h6>
+      <h3>{{ total_success }}</h3>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="stat-card bg-rate">
+      <h6>Error Rate</h6>
+      <h3>{{ error_rate }}%</h3>
+      <small class="fw-semibold">Invalid lines: {{ invalid_lines }}</small>
+    </div>
+  </div>
+</div>
+
+<!-- Error Frequency Table -->
+<div class="card p-3 mb-4">
+  <h5 class="fw-bold">📌 Error Code Frequency</h5>
+  <table class="table table-bordered table-striped mt-2">
+    <thead>
+      <tr>
+        <th>Error Code</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for code, count in error_counts.items() %}
+      <tr>
+        <td>{{ code }}</td>
+        <td>{{ count }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Top IP Table -->
+<div class="card p-3 mb-4">
+  <h5 class="fw-bold">🚨 Top 5 IPs Generating Errors</h5>
+  <table class="table table-bordered table-striped mt-2">
+    <thead>
+      <tr>
+        <th>IP Address</th>
+        <th>Error Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ip, count in top_ips %}
+      <tr>
+        <td>{{ ip }}</td>
+        <td>{{ count }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Chart 1 -->
+<div class="card p-3 mb-4">
+  <h5 class="fw-bold">📊 Error Distribution Chart</h5>
+  <img class="img-fluid mt-3 chart-img"
+       src="{{ url_for('static', filename='images/' + error_chart_file) }}" />
+
+  <div class="mt-3">
+    <a class="btn btn-dark btn-sm" href="/download/chart/{{ error_chart_file }}">
+      ⬇ Download Error Chart
+    </a>
+  </div>
+</div>
+
+<!-- Chart 2 -->
+<div class="card p-3 mb-4">
+  <h5 class="fw-bold">📊 Request Method Distribution</h5>
+  <img class="img-fluid mt-3 chart-img"
+       src="{{ url_for('static', filename='images/' + method_chart_file) }}" />
+
+  <div class="mt-3">
+    <a class="btn btn-outline-dark btn-sm" href="/download/chart/{{ method_chart_file }}">
+      ⬇ Download Method Chart
+    </a>
+  </div>
+</div>
+
+<!-- Download Buttons -->
+<div class="card p-3">
+  <h5 class="fw-bold">⬇ Downloads</h5>
+  <div class="d-flex flex-wrap gap-2 mt-2">
+    <a class="btn btn-danger" href="/download/full_report">📦 Download Full Report (ZIP)</a>
+    <a class="btn btn-success" href="/download/summary">📄 Download Summary Report</a>
+    <a class="btn btn-warning" href="/download/errors_csv">📑 Download Error CSV</a>
+    <a class="btn btn-info" href="/download/top_ips_csv">🌐 Download Top IP CSV</a>
+    <a class="btn btn-primary" href="/download/methods_csv">⚡ Download Methods CSV</a>
+  </div>
+</div>
+
+{% endblock %}

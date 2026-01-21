@@ -1,0 +1,159 @@
+/* ---------- GLOBAL THEME ---------- */
+.bg-soft {
+  background: linear-gradient(135deg, #f8fbff, #f1f7ff);
+  min-height: 100vh;
+}
+
+.gradient-navbar {
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #db2777);
+}
+
+/* ---------- CARD DESIGN ---------- */
+.card {
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+/* ---------- SUMMARY BOXES ---------- */
+.stat-card {
+  padding: 18px;
+  border-radius: 16px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+
+  /* hover animation */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h6 {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.stat-card h3 {
+  font-weight: 800;
+  margin: 0;
+}
+
+.stat-card::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 140px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+}
+
+/* ✅ Gradient multi-color cards */
+.bg-total {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+.bg-error {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #22c55e, #10b981);
+}
+
+.bg-rate {
+  background: linear-gradient(135deg, #f59e0b, #db2777);
+}
+
+/* ---------- TABLE DESIGN ---------- */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: linear-gradient(90deg, #111827, #374151);
+  color: white;
+}
+
+/* ---------- CHART IMAGE ---------- */
+.chart-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  border-radius: 12px !important;
+  font-weight: 600;
+}
+
+.btn-danger {
+  background: linear-gradient(90deg, #ef4444, #db2777) !important;
+  border: none !important;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #22c55e, #16a34a) !important;
+  border: none !important;
+}
+
+.btn-warning {
+  background: linear-gradient(90deg, #f59e0b, #f97316) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-info {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #2563eb, #7c3aed) !important;
+  border: none !important;
+}
+
+/* ---------- DARK MODE ---------- */
+body.dark-mode {
+  background: #0b1220 !important;
+  color: white !important;
+}
+
+body.dark-mode .card {
+  background: #111827 !important;
+  color: white !important;
+}
+
+body.dark-mode .table {
+  color: white !important;
+}
+
+body.dark-mode input,
+body.dark-mode .form-control {
+  background-color: #1f2937 !important;
+  color: white !important;
+  border: 1px solid #374151 !important;
+}
+
+body.dark-mode input::placeholder {
+  color: #9ca3af !important;
+}
+
+body.dark-mode .chart-img {
+  background: #0b1220;
+}

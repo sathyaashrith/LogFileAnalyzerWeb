@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h3 class="mb-3">Upload Log File</h3>
+
+  <form action="/analyze" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <input class="form-control" type="file" name="logfile" required />
+    </div>
+    <button class="btn btn-primary">Analyze</button>
+  </form>
+
+  <hr>
+
+  <p class="text-muted mb-0">
+    Supported log format example:
+    <br>
+    <code>2026-01-21 10:30:12 | 192.168.1.10 | GET | 404</code>
+  </p>
+</div>
+{% endblock %}
