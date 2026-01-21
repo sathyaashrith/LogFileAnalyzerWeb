@@ -79,4 +79,8 @@ The dashboard provides:
 
 <img width="1919" height="949" alt="Screenshot 2026-01-21 142409" src="https://github.com/user-attachments/assets/5ba59642-9da1-464b-85e0-e72f9a0406c0" />
 <img width="1909" height="940" alt="Screenshot 2026-01-21 142437" src="https://github.com/user-attachments/assets/7a39f11f-5c9b-4833-8419-6a72b1cb2606" />
+<img width="1919" height="937" alt="Screenshot 2026-01-21 151454" src="https://github.com/user-attachments/assets/465d0273-463d-40bd-a16b-d5b2faf44000" />
+<img width="988" height="656" alt="Screenshot 2026-01-21 151524" src="https://github.com/user-attachments/assets/93546ec0-78cd-4505-a30a-e4cafea09b26" />
+<img width="1014" height="488" alt="Screenshot 2026-01-21 151542" src="https://github.com/user-attachments/assets/e07f3277-6aef-45f1-96dd-22da04dbfb94" />
+
 
